@@ -14,7 +14,7 @@
   line-height: 24px;
   font-weight: 400;
 
-  color: #000000;
+  color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
@@ -24,63 +24,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body{
-  max-width: 1440px;
+.pagelink{ 
   display: block;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-   color: #212121;
-   margin: 16px;
+  font-size: large;
+  margin-bottom: 20px;
+}
 
-  
-  }
-  
-    ul{
-      list-style-type: none;  
-    flex-wrap: wrap;
-    gap: 24px;
-    display: flex;
-    padding-left: auto;
-    padding-right: auto;
-    
-  }
-  img{display: block;
-      height: auto;  
-      width: 360px;       
-      object-fit:cover;    
-    }
-  p{
-    text-decoration: underline;
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  form{
-    display: block;
-    border-radius: 8px;
-    padding: 24px;
-    width: 408px;
-    background-color: #fafafa;
-    
-  }
-  
-  input, textarea {
-    display: block;   
-    Width: 360px;
-    margin-bottom: 16px;
-   
-  }
-
-  button{
-    border-radius: 8px;
-    padding: 8px 16px;
-    width: 95px;
-    height: 40px;
-    background: #4e75ff;
-font-weight: 500;
-font-size: 16px;
-
-line-height: 1.5;
-letter-spacing: 0.04em;
-color: #fff;
-  }
+.timer{
+  display: block;
+}
