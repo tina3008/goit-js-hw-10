@@ -24,12 +24,23 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.pagelink{ 
+.pagelink,input-block{ 
   display: block;
   font-size: large;
   margin-bottom: 20px;
 }
 
 .timer{
-  display: block;
+  display: flex;
+}
+.field{
+  display: flex-block;
+ 
+}
+
+span{
+  display: flex;
+  margin-left: 10px;
+  justify-content: center;
+  
 }
