@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>hw10</title>
-  <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-d7894573.css">
+  <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-b5abda9d.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-77e16229.js">
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-8658ba2b.css">
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
 </head>
 <body>
     <a href="./index.html" class ="pagelink">back up</a>
 
     <div class="input-block">
         <input type="text" id="datetime-picker" />
-        <button type="button" data-start>Start</button>
+        <button type="button"  data-start>Start</button>
         
         <div class="timer">
           <div class="field">
@@ -34,7 +38,8 @@
         </div>
     </div>
 
-    
-<link  href="data:application/javascript;base64,aW1wb3J0IGZsYXRwaWNrciBmcm9tICJmbGF0cGlja3IiOwppbXBvcnQgImZsYXRwaWNrci9kaXN0L2ZsYXRwaWNrci5taW4uY3NzIjsKCmltcG9ydCBpemlUb2FzdCBmcm9tICJpeml0b2FzdCI7CmltcG9ydCAiaXppdG9hc3QvZGlzdC9jc3MvaXppVG9hc3QubWluLmNzcyI7CgpsZXQgdXNlclNlbGVjdGVkRGF0ZTsKCmNvbnN0IG9wdGlvbnMgPSB7CiAgICBlbmFibGVUaW1lOiB0cnVlLAogICAgdGltZV8yNGhyOiB0cnVlLAogICAgZGVmYXVsdERhdGU6IG5ldyBEYXRlKCksCiAgICBtaW51dGVJbmNyZW1lbnQ6IDEsCiAgICBvbkNsb3NlKHNlbGVjdGVkRGF0ZXMpIHsKICAgICAgY29uc29sZS5sb2coc2VsZWN0ZWREYXRlc1swXSk7ICAKICAgICAgdXNlclNlbGVjdGVkRGF0ZSA9ICBzZWxlY3RlZERhdGVzWzBdOyAgIAogICAgfSwgICAgCiAgfTsKCiAgY29uc3QgQnRuID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYnV0dG9uJyk7CiAgQnRuLmRhdGFzZXQuZGlzYWJsZWQgPSAidHJ1ZSIKICBjb25zb2xlLmxvZyhzYXZlQnRuLmRhdGFzZXQuZGlzYWJsZWQpCiAgCiAgZmxhdHBpY2tyKCJpbnB1dCNkYXRldGltZS1waWNrZXIiLCBvcHRpb25zLCB7CiAgICBpZiAob3B0aW9ucy5kZWZhdWx0RGF0ZSA8PSBvcHRpb25zLnVzZXJTZWxlY3RlZERhdGUpIHsKICAgICAgICBpemlUb2FzdC5zaG93KHsgICAgICAgICAgIAogICAgICAgICAgICBtZXNzYWdlOiAnUGxlYXNlIGNob29zZSBhIGRhdGUgaW4gdGhlIGZ1dHVyZScKICAgICAgICB9KTsKICAgICAgICAKICAgIEJ0bi5kYXRhc2V0LmRpc2FibGVkID0gInRydWUiOyAKICAgIH0gZWxzZSB7CiAgICAgICAgQnRuLmRhdGFzZXQuZGlzYWJsZWQ9ImZhbHNlIjsKICAgIGNvbnN0IHRpbWVlbHNlID0gc2V0SW50ZXJ2YWwoY29udmVydE1zKG9wdGlvbnMudXNlclNlbGVjdGVkRGF0ZSksMTAwMCkKICAgIH07CiAgCiAgfSk7CgovLyAgICsrKysrKysrKysrKysrKysrKysrCgogIGZ1bmN0aW9uIGNvbnZlcnRNcyhtcykgewogICAgLy8gTnVtYmVyIG9mIG1pbGxpc2Vjb25kcyBwZXIgdW5pdCBvZiB0aW1lCiAgICBjb25zdCBzZWNvbmQgPSAxMDAwOwogICAgY29uc3QgbWludXRlID0gc2Vjb25kICogNjA7CiAgICBjb25zdCBob3VyID0gbWludXRlICogNjA7CiAgICBjb25zdCBkYXkgPSBob3VyICogMjQ7CiAgCiAgICAvLyBSZW1haW5pbmcgZGF5cwogICAgY29uc3QgZGF5cyA9IE1hdGguZmxvb3IobXMgLyBkYXkpOwogICAgLy8gUmVtYWluaW5nIGhvdXJzCiAgICBjb25zdCBob3VycyA9IE1hdGguZmxvb3IoKG1zICUgZGF5KSAvIGhvdXIpOwogICAgLy8gUmVtYWluaW5nIG1pbnV0ZXMKICAgIGNvbnN0IG1pbnV0ZXMgPSBNYXRoLmZsb29yKCgobXMgJSBkYXkpICUgaG91cikgLyBtaW51dGUpOwogICAgLy8gUmVtYWluaW5nIHNlY29uZHMKICAgIGNvbnN0IHNlY29uZHMgPSBNYXRoLmZsb29yKCgoKG1zICUgZGF5KSAlIGhvdXIpICUgbWludXRlKSAvIHNlY29uZCk7CiAgCiAgICByZXR1cm4geyBkYXlzLCBob3VycywgbWludXRlcywgc2Vjb25kcyB9OwogIH0KICAKICBjb25zb2xlLmxvZyhjb252ZXJ0TXMoMjAwMCkpOyAvLyB7ZGF5czogMCwgaG91cnM6IDAsIG1pbnV0ZXM6IDAsIHNlY29uZHM6IDJ9CiAgY29uc29sZS5sb2coY29udmVydE1zKDE0MDAwMCkpOyAvLyB7ZGF5czogMCwgaG91cnM6IDAsIG1pbnV0ZXM6IDIsIHNlY29uZHM6IDIwfQogIGNvbnNvbGUubG9nKGNvbnZlcnRNcygyNDE0MDAwMCkpOyAvLyB7ZGF5czogMCwgaG91cnM6IDYgbWludXRlczogNDIsIHNlY29uZHM6IDIwfQ==">
+ 
+       
+
 </body>
 </html>
