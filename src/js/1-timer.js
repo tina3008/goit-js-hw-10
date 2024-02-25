@@ -58,7 +58,7 @@ inputTime.addEventListener('click', event => {
 
     for (const i of showTime) {
       i.innerText = '00';
-      console.log(i.innerText);
+     
     }
 
     iziToast.show({
@@ -67,7 +67,7 @@ inputTime.addEventListener('click', event => {
       message: `Please choose a date in the future`,
     });
   } else {
-    startBtn.disabled = true;
+    startBtn.disabled = false;
 
     const repeatTime = setInterval(() => {
       interval = userSelectedDate - new Date();
