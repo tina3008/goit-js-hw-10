@@ -62,11 +62,11 @@ startBtn.disabled = true;
 startBtn.addEventListener('click', event => {
   const timer = convertMs(interval);
 
-  startBtn.disabled = false;
+  // startBtn.disabled = false;
 
   const repeatTime = setInterval(() => {
     interval = userSelectedDate - new Date();
-
+    startBtn.disabled = true;
     if (interval < 1) return;
 
     const timer = convertMs(interval);
