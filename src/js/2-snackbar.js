@@ -1,11 +1,11 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-const formFill=document.querySelector(".form");
+ const delayForm=document.querySelector(".form");
 
 
 
-formFill.addEventListener('submit', event => {
+delayForm.addEventListener('submit', event => {
   event.preventDefault();
   const timer = event.currentTarget.elements.delay.value;
   const radio = event.currentTarget.elements.state.value;
@@ -16,26 +16,37 @@ formFill.addEventListener('submit', event => {
       console.log(timer, radio );
       if (radio ==="fulfilled") {
         resolve(
-          iziToast.show({  
-            color: 'green',
-            position: "topRight",
-            message: `✅ Fulfilled promise in ${timer}ms`
-        })
+  
           );
       } else {
         reject(
-          iziToast.show({ 
-            color: 'red',
-            position: "topRight",          
-            message: `❌ Rejected promise in ${timer}ms`
-        })
+    
         );
       }
     }, timer);
   });
 
+// Registering promise callbacks
+promise
+  .then(value => {
+    iziToast.success({  
+      color: 'green',
+      position: "topRight",
+      message: `✅ Fulfilled promise in ${timer}ms`
+  })
+  })
+  .catch(error => {
+    iziToast.error({ 
+      color: 'red',
+      position: "topRight",          
+      message: `❌ Rejected promise in ${timer}ms`
+  })
+  });
+
 });
 
 
-    
+
+
+ 
   
