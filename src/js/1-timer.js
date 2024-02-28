@@ -60,15 +60,14 @@ const showTime = document.querySelectorAll('.value');
 startBtn.disabled = true;
 
 startBtn.addEventListener('click', event => {
-  const timer = convertMs(interval);
-
-  // startBtn.disabled = false;
-
   const repeatTime = setInterval(() => {
     interval = userSelectedDate - new Date();
-    event.preventDefault();
-    startBtn.disabled = true;
-    if (interval < 1) return;
+
+    if (interval < 1) {
+      startBtn.disabled = true;
+      clearInterval(repeatTime);
+      return;
+    }
 
     const timer = convertMs(interval);
 
