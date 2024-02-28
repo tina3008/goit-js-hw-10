@@ -25,10 +25,10 @@ const options = {
       });
     } else {
       startBtn.disabled = false;
+      event.preventDefault();
     }
   },
 };
-
 //   ++++++++++++++++++++
 
 function convertMs(ms) {
@@ -66,6 +66,7 @@ startBtn.addEventListener('click', event => {
 
   const repeatTime = setInterval(() => {
     interval = userSelectedDate - new Date();
+    event.preventDefault();
     startBtn.disabled = true;
     if (interval < 1) return;
 
