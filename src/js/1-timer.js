@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let userSelectedDate;
-let interval;
+let timeInterval;
 
 const options = {
   enableTime: true,
@@ -15,9 +15,9 @@ const options = {
   onClose(selectedDates) {
     // console.log(selectedDates[0]);
     userSelectedDate = selectedDates[0];
-    interval = userSelectedDate - options.defaultDate;
-    // console.log(interval);
-    if (interval < 1) {
+    timeInterval = userSelectedDate - options.defaultDate;
+
+    if (timeInterval < 1) {
       iziToast.error({
         color: 'red',
         position: 'topRight',
@@ -25,7 +25,7 @@ const options = {
       });
     } else {
       startBtn.disabled = false;
-      event.preventDefault();
+      inputTime.disabled = true;
     }
   },
 };
@@ -53,7 +53,7 @@ function convertMs(ms) {
 //   +++++++++++++++++++++++++ begin code ===================++
 
 const calendar = flatpickr('#datetime-picker', options);
-// const inputTime = document.querySelector('.input-block');
+const inputTime = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button');
 const showTime = document.querySelectorAll('.value');
 
@@ -61,15 +61,17 @@ startBtn.disabled = true;
 
 startBtn.addEventListener('click', event => {
   const repeatTime = setInterval(() => {
-    interval = userSelectedDate - new Date();
+    timeInterval = userSelectedDate - new Date();
+    event.preventDefault();
 
-    if (interval < 1) {
+    if (timeInterval < 1) {
       startBtn.disabled = true;
+      inputTime.disabled = false;
       clearInterval(repeatTime);
       return;
     }
 
-    const timer = convertMs(interval);
+    const timer = convertMs(timeInterval);
 
     showTime[0].innerText = timer.days.toString().padStart(2, '0');
     showTime[1].innerText = timer.hours.toString().padStart(2, '0');
