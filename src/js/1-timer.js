@@ -57,12 +57,16 @@ const inputTime = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button');
 const showTime = document.querySelectorAll('.value');
 
+
+console.log(showTime);
+
 startBtn.disabled = true;
 
 startBtn.addEventListener('click', event => {
   const repeatTime = setInterval(() => {
     timeInterval = userSelectedDate - new Date();
     event.preventDefault();
+    inputTime.disabled = true;
 
     if (timeInterval < 1) {
       startBtn.disabled = true;
